@@ -1,6 +1,5 @@
 use std::fs;
 use clap::{ArgGroup, Parser};
-use rand::seq::SliceRandom;
 
 /// Randomize a group of people from a text file (one name per line).
 #[derive(Parser, Debug)]
@@ -52,8 +51,7 @@ fn main() {
         std::process::exit(1);
     }
 
-    let mut rng = rand::rng();
-    people.shuffle(&mut rng);
+    fastrand::shuffle(&mut people);
 
     let total = people.len();
 
