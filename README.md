@@ -74,4 +74,4 @@ The binary will be at `target/release/random_group`.
 ## Dependencies
 
 - [clap](https://github.com/clap-rs/clap) — CLI argument parsing
-- [rand](https://github.com/rust-random/rand) — Random shuffling
+- [fastrand](https://github.com/smol-rs/fastrand) — Lightweight random shuffling
